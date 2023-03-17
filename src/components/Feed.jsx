@@ -11,17 +11,6 @@ const Feed = () => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
       setVideos(data.items);
     });
-    // .catch((error) => {
-    //   // Error
-    //   if (error.response) {
-    //   } else if (error.request) {
-    //     console.log(error.request);
-    //   } else {
-    //     // Something happened in setting up the request that triggered an Error
-    //     console.log('Error', error.message);
-    //   }
-    //   console.log(error.config);
-    // });
   }, [selectedCategory]);
 
   return (
